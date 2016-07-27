@@ -48,7 +48,7 @@ require_relative '../models/address_book'
          main_menu
        when 5
          system "clear"
-         entry_n_submenu 
+         entry_n_submenu
          main_menu
        when 6
          puts "Good-bye!"
@@ -63,18 +63,18 @@ require_relative '../models/address_book'
    end
    
    def entry_n_submenu
-       print "Entry number to view: "
+       print "Entry number to view:"
        selection = gets.chomp.to_i
        
-        if selection < @address_book.entries.count
-            puts @address_book.entries[selection]
-            puts "Press enter to return to the main menu"
-            gets.chomp 
-            system "clear"
-        else
-            puts "#{selection} is not a valid input"
-            entry_n_submenu
-        end 
+       if selection  < @address_book.entries.count
+        puts @address_book.entries[selection]
+        puts "Press enter to return to the main menu"
+        gets.chomp 
+        system "clear"
+       else 
+        puts "#{selection} is not a valid input"
+        entry_n_submenu
+       end 
     end 
   
    def view_all_entries
