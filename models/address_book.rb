@@ -6,14 +6,6 @@
      def initialize
      @entries = []
    end
-   
-     def remove_entry(name, phone_number, email)
-      delete_entry = nil
-      if name == entry.name && phone_number == entry.phone_number && email == entry.email
-     end
-    end 
-       @entry.delete(delete_entry)
-     end 
      
      def add_entry(name, phone_number, email)
      index = 0
